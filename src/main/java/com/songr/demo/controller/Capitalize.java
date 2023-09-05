@@ -9,7 +9,7 @@ public class Capitalize {
     @GetMapping("/capitalize/{text}")
     public String capitalize(@PathVariable String text, Model model) {
         String capitalizedText = text.toUpperCase();
-        model.addAttribute(capitalizedText,"hello" );
-        return "hello.html";
+        model.addAttribute("text", capitalizedText);
+        return "hello";
     }
 }

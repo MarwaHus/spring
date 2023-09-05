@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Albums</title>
-  </head>
+</head>
 <body>
-<h1>Albums</h1>
-<ul>
-     <li th:each="album : ${albums}">
-      <h2 th:text="${album.title}"></h2>
-      <p th:text="${album.artist}"></p>
-      <p th:text="${album.songCount} + ' songs'"></p>
-      <p th:text="${album.length} + ' seconds'"></p>
-      <img th:src="${album.imageUrl}" th:alt="${album.title} album art"/>
-   </li>
-  </ul>
+<h1 style="text-align:center;">Albums</h1>
+<ul style=" display: flex;justify-content: center;justify-content: space-around;">
+    <li th:each="album : ${albums}">
+        <h2  th:text="${album.title}"></h2>
+        <p th:text="${album.artist}"></p>
+        <p  th:text="${album.songCount}"></p>
+        <p th:text="${album.length}" ></p>
+        <img th:src="${album.imageUrl}"/>
+    </li>
+</ul>
 </body>
-</html>

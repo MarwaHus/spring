@@ -9,8 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 class DemoApplicationTests {
-
-	@Test
+    @Test
 	public void testSayHello() throws Exception {
 		Hello hello = new Hello();
 		String result = hello.sayHello();

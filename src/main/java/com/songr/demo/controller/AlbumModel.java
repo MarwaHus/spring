@@ -1,6 +1,8 @@
 package com.songr.demo.controller;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class AlbumModel {
@@ -20,7 +22,8 @@ public class AlbumModel {
     @Column(name = "imageUrl", nullable = false)
 
     private String imageUrl;
-
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL)
+    private List<Song> songs;
     public AlbumModel(String title, String artist, int songCount, int length, String imageUrl) {
         this.title = title;
         this.artist = artist;
@@ -77,6 +80,18 @@ public class AlbumModel {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
+
+    public List<Song> getSongs() {
+        return songs;
+    }
+
+
+    public void addSong(Song song) {
+        song.setAlbum(this);
+        this.songs.add(song);
+    }
+
 
     public AlbumModel(){
 

@@ -27,6 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 class DemoApplicationTests {
+
 	@Autowired
 	private MockMvc mockMvc;
 	@Autowired
@@ -35,6 +36,7 @@ class DemoApplicationTests {
 	@Autowired
 	private AlbumStoreInterface albumStoreInterface;
 	@Test
+
 	public void testSayHello() throws Exception {
 		Hello hello = new Hello();
 		String result = hello.sayHello();

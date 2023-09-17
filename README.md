@@ -8,4 +8,3 @@ Once the application is running, you can access the following endpoints:
 - /: Displays the home page of the Songr application, which includes a welcome message and logo. You can access this endpoint by navigating to localhost:8080 in your web browser.
 
 - /albums: Displays a list of albums with basic information like the title, artist, song count, length, and image. You can access this endpoint by navigating to localhost:8080/albums in your web browser.
-
